@@ -2,7 +2,9 @@
 
 Dự án AI-GEN sử dụng TensorFlow và FastAPI để huấn luyện và triển khai mô hình phân loại ảnh đa nhãn, kết hợp với crawler để thu thập dữ liệu từ Google.
 
-## Cài đặt các thư viện cần thiết với pip
+## Tài Nguyên Và HDSD
+
+---------------- Cài đặt thư viện ----------------
 ```bash
 # Backend API
 pip install fastapi uvicorn python-multipart
