@@ -50,3 +50,14 @@ pip install icrawler
 8. Predict
    - AI đọc ảnh mẫu, phân tích và trả về kết quả dưới dạng JSON.
 
+
+=================================================================
+|                            UPDATE                             |
+=================================================================
+25/05/2025
+   -suffix crawler
+      cào ảnh ít bị trùng lặp hơn mỗi lần cào
+   -ensemble learning
+      phương pháp kết hợp hiệu quả nhiều file keras để có kết quả tốt hơn
+   -json returning
+      predict bây giờ sẽ trả về JSON
