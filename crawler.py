@@ -2,17 +2,27 @@ from icrawler.builtin import GoogleImageCrawler
 from labels import LABELS
 import os
 import shutil
+import random
 
 if os.path.exists("dataset"):
     shutil.rmtree("dataset")
 os.makedirs("dataset", exist_ok=True)
 
-number_of_each = 5  # số lượng data cho từng label
+number_of_each = 2  # số lượng data cho từng label
+
+# Danh sách suffixes đa dạng, không liên quan tutorial
+suffixes = [
+    "", " diy ideas", " project", " craft", " handmade", " design", 
+    " art", " creative", " model", " decoration", " hack", " inspiration"
+]
 
 for label in LABELS:
     if not label.strip():
         continue
-    keyword = f"diy {label}"
+
+    # Chọn ngẫu nhiên 1 suffix mỗi lần chạy
+    suffix = random.choice(suffixes)
+    keyword = f"diy {label}{suffix}"
     print(f"[Starting]: {keyword}")
 
     # Tạo thư mục tạm để crawl ảnh
