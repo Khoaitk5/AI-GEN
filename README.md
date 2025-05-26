@@ -23,25 +23,32 @@ pip install icrawler
 |                   Huấn Luyện TensorFlow                       |
 =================================================================
 1. Crawler
-   - Chạy chương trình để thu thập dataset tự động.
-   - Khuyến khích lấy ít dữ liệu hơn so với phương pháp auto.
+   - Chạy chương trình để thu thập dataset tự động (images).
+   - Khuyến khích lấy ít dữ liệu vì cần chỉnh sửa thủ công:
+      5 dữ liệu cho mỗi label.
    - Có thể chỉnh sửa số lượng dữ liệu trong biến "number_of_each".
 
 2. Write
    - Tạo file CSV để lọc và xử lý dữ liệu từ dataset thu thập được.
+      Dữ liệu mẫu, không đầy đủ.
 
-3. Chỉnh tay
+3. Điều chỉnh
    - Sử dụng file `pre_dataset.csv`.
    - Kiểm tra xem ảnh có thể thêm tag (nhãn) nào ngoài các tag có sẵn hay không.
    - Thêm tag cho ảnh bằng cách thêm dấu phẩy "," và tên tag phía sau.
    - Tag phải nằm trong danh sách nhãn được định nghĩa trong `labels.py`.
-   - Nên gán nhiều tag cho một ảnh để tăng độ chính xác của AI.
+   - Nên gán nhiều tag cho một ảnh để tăng độ chính xác của AI sau khi học.
 
 4. Rewrite
-   - Chạy chương trình để chuyển đổi `pre_dataset.csv` thành `pro_dataset.csv` dùng cho AI học.
+   - Chạy chương trình để chuyển đổi `pre_dataset.csv` thành `pro_dataset.csv`:
+      Là dữ liệu AI có thể học được.
 
 5. Train
    - Chạy chương trình để đọc `pro_dataset.csv` và huấn luyện mô hình, tạo file keras trong thư mục `model`.
+
+
+* Các bước dưới chỉ dùng cho kiểm tra đầu ra của AI,
+* Không phục vụ cho việc học máy.
 
 6. Chạy server
    - Mở terminal và chạy lệnh sau để khởi động server:
@@ -64,3 +71,14 @@ pip install icrawler
       phương pháp kết hợp hiệu quả nhiều file keras để có kết quả tốt hơn
    -json returning
       predict bây giờ sẽ trả về JSON
+
+
+=================================================================
+|                         UP COMMING                            |
+=================================================================
+   -predict write 
+      chương trình write set up tự động sử dụng chính AI để predict label
+      vẫn cần kiểm tra lại độ chính xác của predict để tăng độ chính xác của dữ liệu
+   -automatic server
+      chạy server không cần lệnh
+            uvicorn main:app --reload
