@@ -1,10 +1,10 @@
 LABELS = [
     # style
-    "cute", "modern", "minimalist", "vintage",
+    "cute", "modern", "minimalist", "vintage", "recycled", "education", "art", "furniture", "tech", "boho", "origami",
     # category
-    "flower", "animal", "electronic", "toy", "gardening", "stationary", "nature", "space", "cartoon", "car",
+    "flower", "animal", "toy", "gardening", "stationary", "nature", "space", "cartoon", "car", "bag", "pouche", "jewelry", "accessorie", "planter", "clothes",
     # material
-    "wood", "paper", "cardboard", "fabric", "yarn", "metal", "clay",
+    "wood", "paper", "cardboard", "fabric", "yarn", "metal", "clay", "led", "glass", "ribbon", "paint", "foam", "electronic", 
     # difficulty
     "very-easy", "easy", "medium", "hard", "very-hard",
     # theme
